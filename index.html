@@ -36,14 +36,16 @@
   <!-- This script installs service_worker.js to provide PWA functionality to
        application. For more information, see:
        https://developers.google.com/web/fundamentals/primers/service-workers -->
-       <script src="//cdnjs.cloudflare.com/ajax/libs/pdf.js/2.7.570/pdf.min.js"></script>
+       <script src="https://cdn.jsdelivr.net/npm/pdfjs-dist@2.12.313/build/pdf.js" type="text/javascript"></script>
        <script type="text/javascript">
-         // Link to worker for pdf.js library
-         pdfjsLib.GlobalWorkerOptions.workerSrc = "//cdnjs.cloudflare.com/ajax/libs/pdf.js/2.7.570/pdf.worker.min.js";
+         pdfjsLib.GlobalWorkerOptions.workerSrc = "https://cdn.jsdelivr.net/npm/pdfjs-dist@2.12.313/build/pdf.worker.min.js";
+         pdfRenderOptions = {
+           cMapUrl: 'https://cdn.jsdelivr.net/npm/pdfjs-dist@2.12.313/cmaps/',
+           cMapPacked: true,
+         }
        </script>
-       <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"  type="application/javascript"></script>
   <script>
-    var serviceWorkerVersion = '3816335586';
+    var serviceWorkerVersion = '779646726';
     var scriptLoaded = false;
     function loadMainDartJs() {
       if (scriptLoaded) {
